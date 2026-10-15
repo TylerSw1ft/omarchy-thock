@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
-  "id": "sysadmin.thock",
+  "id": "tylersw1ft.thock",
   "name": "Thock",
   "version": "1.0.0",
-  "author": "sysadmin",
+  "author": "TylerSw1ft",
   "license": "MIT",
   "description": "Thocky keyboard sounds driven by Hyprland keybindings, without reading input devices",
   "kinds": ["service", "bar-widget"],

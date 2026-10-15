@@ -7,11 +7,11 @@ import qs.Ui
 // switches sounds on or off, and scrolling changes the volume.
 Panel {
   id: root
-  moduleName: "sysadmin.thock"
-  ipcTarget: "sysadmin.thock"
+  moduleName: "tylersw1ft.thock"
+  ipcTarget: "tylersw1ft.thock"
 
   readonly property var service: bar && bar.shell && typeof bar.shell.serviceFor === "function"
-    ? bar.shell.serviceFor("sysadmin.thock") : null
+    ? bar.shell.serviceFor("tylersw1ft.thock") : null
   readonly property bool on: service ? service.enabled : false
   readonly property int percent: service ? Math.round(service.volume * 100) : 0
   readonly property color fg: bar ? bar.foreground : Color.foreground

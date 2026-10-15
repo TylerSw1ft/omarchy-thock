@@ -87,13 +87,13 @@ running service across plugin hot reloads.
 omarchy plugin add https://github.com/TylerSw1ft/omarchy-thock.git --enable
 ```
 
-That installs it to `~/.config/omarchy/plugins/sysadmin.thock/` and puts the
+That installs it to `~/.config/omarchy/plugins/tylersw1ft.thock/` and puts the
 icon in the bar. The key bindings live in Hyprland's config, so add this to
 the end of `~/.config/hypr/hyprland.lua`:
 
 ```lua
--- Thock typing sounds (Omarchy plugin sysadmin.thock). Skipped if the plugin is removed.
-local thock_binds = (os.getenv("HOME") or "") .. "/.config/omarchy/plugins/sysadmin.thock/hypr/thock.lua"
+-- Thock typing sounds (Omarchy plugin tylersw1ft.thock). Skipped if the plugin is removed.
+local thock_binds = (os.getenv("HOME") or "") .. "/.config/omarchy/plugins/tylersw1ft.thock/hypr/thock.lua"
 local thock_file = io.open(thock_binds, "r")
 if thock_file then
   thock_file:close()
@@ -101,20 +101,20 @@ if thock_file then
 end
 ```
 
-Update later with `omarchy plugin update sysadmin.thock`.
+Update later with `omarchy plugin update tylersw1ft.thock`.
 
 ## Install pieces
 
-- Plugin: `~/.config/omarchy/plugins/sysadmin.thock/`, enabled with
-  `omarchy plugin enable sysadmin.thock right`.
+- Plugin: `~/.config/omarchy/plugins/tylersw1ft.thock/`, enabled with
+  `omarchy plugin enable tylersw1ft.thock right`.
 - Bindings: a guarded `dofile` at the end of `~/.config/hypr/hyprland.lua`,
   which is skipped if this folder is gone.
 
 ## Remove
 
 ```bash
-omarchy plugin disable sysadmin.thock
-rm -r ~/.config/omarchy/plugins/sysadmin.thock ~/.local/state/omarchy/thock.json
+omarchy plugin disable tylersw1ft.thock
+rm -r ~/.config/omarchy/plugins/tylersw1ft.thock ~/.local/state/omarchy/thock.json
 ```
 
 Then delete the "Thock typing sounds" block from `~/.config/hypr/hyprland.lua`.
