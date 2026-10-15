@@ -81,6 +81,28 @@ omarchy restart shell
 Edits to `Service.qml` also need `omarchy restart shell`; the shell keeps a
 running service across plugin hot reloads.
 
+## Install
+
+```bash
+omarchy plugin add https://github.com/TylerSw1ft/omarchy-thock.git --enable
+```
+
+That installs it to `~/.config/omarchy/plugins/sysadmin.thock/` and puts the
+icon in the bar. The key bindings live in Hyprland's config, so add this to
+the end of `~/.config/hypr/hyprland.lua`:
+
+```lua
+-- Thock typing sounds (Omarchy plugin sysadmin.thock). Skipped if the plugin is removed.
+local thock_binds = (os.getenv("HOME") or "") .. "/.config/omarchy/plugins/sysadmin.thock/hypr/thock.lua"
+local thock_file = io.open(thock_binds, "r")
+if thock_file then
+  thock_file:close()
+  dofile(thock_binds)
+end
+```
+
+Update later with `omarchy plugin update sysadmin.thock`.
+
 ## Install pieces
 
 - Plugin: `~/.config/omarchy/plugins/sysadmin.thock/`, enabled with
