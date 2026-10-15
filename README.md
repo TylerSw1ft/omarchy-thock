@@ -2,6 +2,8 @@
 
 Keychron Q-style keyboard sounds for Omarchy, without anything reading your keyboard.
 
+![The Thock panel](preview.png)
+
 ## How it works
 
 Hyprland already receives every keypress. `hypr/thock.lua` adds pass-through
