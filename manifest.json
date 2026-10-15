@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "sysadmin.thock",
+  "name": "Thock",
+  "version": "1.0.0",
+  "author": "sysadmin",
+  "license": "MIT",
+  "description": "Thocky keyboard sounds driven by Hyprland keybindings, without reading input devices",
+  "kinds": ["service", "bar-widget"],
+  "entryPoints": {
+    "service": "Service.qml",
+    "barWidget": "BarWidget.qml"
+  },
+  "barWidget": {
+    "displayName": "Thock",
+    "description": "Toggle typing sounds; scroll to change volume",
+    "category": "Audio",
+    "allowMultiple": false,
+    "defaultSection": "right"
+  }
+}
